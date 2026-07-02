@@ -11,7 +11,7 @@
         /* --- FONDO CUADRICULADO PASTEL (Gingham) --- */
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #fdfdfd;
+            background-color: #fdfdfd !important;
             background-image: 
                 linear-gradient(90deg, rgba(189, 228, 195, 0.25) 50%, transparent 50%),
                 linear-gradient(rgba(244, 180, 202, 0.2) 50%, transparent 50%);
@@ -22,7 +22,7 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px 10px; /* Reducido para móviles */
-            color: #9e8585; /* Marrón pastel */
+            color: #9e8585 !important; /* Marrón pastel */
             box-sizing: border-box;
         }
 
@@ -588,11 +588,22 @@
             .payment-info strong {
                 font-size: 14px;
             }
-            .footer-bar {
-                padding: 10px;
-                font-size: 12px;
-            }
+        .footer-bar {
+            background-color: #bde4c3;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            border-top: 3px solid #7eb68b;
         }
+
+        /* Bloqueo total de modo oscuro */
+        html, body {
+            filter: none !important;
+            color-scheme: light !important;
+        }
+
     </style>
 </head>
 <body>
