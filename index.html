@@ -818,7 +818,7 @@
         // Lógica de conversión de monedas
         if (currency === 'JPY') {
             // Regla de 3: 699 YEN = 4.53 USD
-            postUsd = (amount / 699) * 4.53;
+            postUsd = (amount / 555) * 3.58;
         } else {
             postUsd = amount;
         }
@@ -827,7 +827,7 @@
         const totalUsd = postUsd + feeUsd;
         
         // Multiplicamos por la nueva cotización que me pasaste (1530)
-        const totalArs = totalUsd * 1530;
+        const totalArs = totalUsd * 1540;
         
         const fmtUsd = num => num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         const fmtArs = num => num.toLocaleString('es-AR', { maximumFractionDigits: 0 });
