@@ -783,13 +783,21 @@
         }
         const itemCost = baseValue * 1350;
         let fee = 0;
+
         if (baseValue < 30) {
             fee = ((3086 + (baseValue * 41.7)) * 1.03) + (baseValue * 30);
         } else {
             // Usando tu valor ajustado de 50.25
             fee = ((3086 + (baseValue * 50.25)) * 1.03) + (baseValue * 30);
         }
+
         fee = Math.round(fee * 1.02);
+
+        // Si el pedido es menor a 5 USD, le sumamos un plus razonable (ej: 1500 pesos extra)
+        if (baseValue < 5) {
+            fee += 1000; 
+        }
+
         const total = itemCost + fee;
         
         const fmt = num => num.toLocaleString('es-AR');
