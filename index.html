@@ -727,8 +727,8 @@
                     <div class="input-group">
                         <input type="number" id="postAmount" placeholder="Ej: 2500" min="0" step="0.01">
                         <select id="currencySelect">
-                            <option value="JPY">¥ Yenes</option>
                             <option value="USD">$ USD</option>
+                            <option value="JPY">¥ Yenes</option>
                         </select>
                     </div>
                     
@@ -773,12 +773,12 @@
         event.currentTarget.classList.add('active');
     }
 
-    // Calculadora KR
+   // Calculadora KR
     function calculateCoreana() {
         const input = document.getElementById('lotPrice').value;
         const baseValue = parseFloat(input);
         if (isNaN(baseValue) || baseValue <= 0) {
-            alert("Por favor, ingresa un valor mayor a 0");
+            alert("Por favor, ingresá un valor mayor a 0");
             return;
         }
         const itemCost = baseValue * 1350;
@@ -787,13 +787,13 @@
         if (baseValue < 30) {
             fee = ((3086 + (baseValue * 41.7)) * 1.03) + (baseValue * 30);
         } else {
-            // Usando tu valor ajustado de 50.25
             fee = ((3086 + (baseValue * 50.25)) * 1.03) + (baseValue * 30);
         }
 
-        fee = Math.round(fee * 1.02);
+        fee = fee * 1.02 * 1.07;
+        
+        fee = Math.round(fee);
 
-        // Si el pedido es menor a 5 USD, le sumamos un plus razonable (ej: 1500 pesos extra)
         if (baseValue < 5) {
             fee += 1000; 
         }
@@ -823,10 +823,8 @@
 
         let postUsd = 0;
         
-        // Lógica de conversión de monedas
         if (currency === 'JPY') {
-            // Regla de 3: 699 YEN = 4.53 USD
-            postUsd = (amount / 555) * 3.58;
+            postUsd = (amount / 699) * 4.61;
         } else {
             postUsd = amount;
         }
@@ -834,8 +832,7 @@
         const feeUsd = 3.5;
         const totalUsd = postUsd + feeUsd;
         
-        // Multiplicamos por la nueva cotización que me pasaste (1530)
-        const totalArs = totalUsd * 1540;
+        const totalArs = totalUsd * 1550;
         
         const fmtUsd = num => num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         const fmtArs = num => num.toLocaleString('es-AR', { maximumFractionDigits: 0 });
@@ -847,15 +844,15 @@
         document.getElementById('payBuyee').style.display = 'block';
     }
 
-     // Cambiar el ejemplo (placeholder) según la moneda elegida
-     document.getElementById('currencySelect').addEventListener('change', function() {
-         const inputAmount = document.getElementById('postAmount');
-         if (this.value === 'JPY') {
-             inputAmount.placeholder = "Ej: 2500";
-         } else {
-             inputAmount.placeholder = "Ej: 12.50";
-         }
-     });
+// Cambiar el ejemplo (placeholder) según la moneda elegida
+    document.getElementById('currencySelect').addEventListener('change', function() {
+        const inputAmount = document.getElementById('postAmount');
+        if (this.value === 'USD') {
+            inputAmount.placeholder = "Ej: 12.50";
+        } else {
+            inputAmount.placeholder = "Ej: 2500";
+        }
+    });
 
     // Seguridad (Bloqueo de clic derecho y F12)
     document.addEventListener('contextmenu', function(e) {
