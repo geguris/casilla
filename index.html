@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐸</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        /* --- FONDO CUADRICULADO PASTEL (Gingham) --- */
+
         body {
             font-family: 'Quicksand', sans-serif;
             background-color: #fdfdfd !important;
@@ -21,8 +21,8 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px 10px; /* Reducido para móviles */
-            color: #9e8585 !important; /* Marrón pastel */
+            padding: 20px 10px;
+            color: #9e8585 !important;
             box-sizing: border-box;
         }
 
@@ -30,27 +30,26 @@
             box-sizing: border-box;
         }
 
-        /* --- CONTENEDOR PRINCIPAL --- */
+
         .site-wrapper {
             width: 100%;
             max-width: 600px;
             position: relative;
         }
 
-        /* Etiqueta superior izquierda (URL) */
         .top-tag {
             background-color: #fff0f5;
             border: 3px solid #f4b4ca;
             border-bottom: none;
             border-radius: 15px 15px 0 0;
-            padding: 6px 15px; /* Ajustado para móviles */
+            padding: 6px 15px;
             display: inline-block;
             font-weight: 700;
             color: #f4b4ca;
-            margin-left: 10px; /* Ajustado para móviles */
-            font-size: 12px; /* Ajustado para móviles */
+            margin-left: 10px;
+            font-size: 12px;
             text-shadow: 1px 1px 0px #fff;
-            max-width: calc(100% - 20px); /* Evitar desborde */
+            max-width: calc(100% - 20px);
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -59,18 +58,18 @@
         .portal-card {
             background-color: #ffffff;
             border: 3px solid #7eb68b;
-            border-radius: 20px; /* Suavizado para móviles */
+            border-radius: 20px;
             width: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Suavizado para móviles */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             overflow: hidden;
         }
 
-        /* --- HEADER VERDE MENTA --- */
+
         .header-section {
             background-color: #bde4c3;
-            padding: 15px; /* Reducido para móviles */
+            padding: 15px;
             display: flex;
-            flex-direction: column; /* Apilar elementos en móviles */
+            flex-direction: column;
             align-items: center;
             text-align: center;
             border-bottom: 3px solid #7eb68b;
@@ -79,7 +78,7 @@
 
         .header-left h1 {
             color: #ffffff;
-            font-size: 24px; /* Ajustado para móviles */
+            font-size: 24px;
             font-weight: 700;
             margin: 0 0 5px 0;
             text-shadow: -1.5px -1.5px 0 #7eb68b, 1.5px -1.5px 0 #7eb68b, -1.5px 1.5px 0 #7eb68b, 1.5px 1.5px 0 #7eb68b;
@@ -89,23 +88,22 @@
         .header-left .sub-info {
             color: #7eb68b;
             font-weight: 700;
-            font-size: 12px; /* Ajustado para móviles */
+            font-size: 12px;
             margin-bottom: 10px;
         }
 
-        /* Botones estilo redes sociales */
         .social-pills {
             display: flex;
             gap: 8px;
             justify-content: center;
-            flex-wrap: wrap; /* Permitir que se envuelvan si no caben */
+            flex-wrap: wrap;
         }
 
         .pill {
             background-color: #fff;
-            padding: 4px 10px; /* Ajustado para móviles */
-            border-radius: 12px; /* Ajustado para móviles */
-            font-size: 11px; /* Ajustado para móviles */
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
             font-weight: 700;
             text-decoration: none;
             display: flex;
@@ -117,10 +115,9 @@
         .pill.wpp { color: #f4ca75; border: 1.5px solid #f4ca75; }
         .pill.goms { color: #f4b4ca; border: 1.5px solid #f4b4ca; }
 
-        /* Foto de perfil circular */
         .avatar-container {
-            width: 80px; /* Reducido para móviles */
-            height: 80px; /* Reducido para móviles */
+            width: 80px;
+            height: 80px;
             background-color: #fff;
             border-radius: 50%;
             border: 3px solid #7eb68b;
@@ -136,15 +133,15 @@
             border-radius: 50%;
             background-color: #fff0f5;
             border: 2px dashed #f4b4ca;
-            background-image: url('https://media1.tenor.com/m/SwAidfpvCqsAAAAC/kpop-triples.gif'); /* TU FOTO ACÁ */
+            background-image: url('https://media1.tenor.com/m/SwAidfpvCqsAAAAC/kpop-triples.gif');
             background-size: cover;
             background-position: center;
         }
 
-        /* --- BARRA DE NAVEGACIÓN ROSA --- */
+
         .nav-container {
             background-color: #fff0f5;
-            padding: 10px; /* Reducido para móviles */
+            padding: 10px;
             position: relative;
         }
 
@@ -152,23 +149,23 @@
             display: flex;
             justify-content: center;
             gap: 6px;
-            flex-wrap: wrap; /* Permitir que las pestañas se envuelvan si es necesario */
+            flex-wrap: wrap;
         }
 
         .tab-button {
-            flex: 1 1 auto; /* Permitir que crezcan y se encojan, pero que no se fuercen a un ancho fijo */
-            min-width: calc(50% - 6px); /* Mostrar 2 por fila si la pantalla es muy estrecha */
+            flex: 1 1 auto;
+            min-width: calc(33.33% - 6px); 
             background-color: #ffffff;
             color: #f4b4ca;
             text-align: center;
-            padding: 6px; /* Ajustado para móviles */
-            font-size: 12px; /* Ajustado para móviles */
+            padding: 6px;
+            font-size: 12px;
             font-weight: 700;
             border: 2px solid #f4b4ca;
-            border-radius: 12px; /* Ajustado para móviles */
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.2s;
-            margin-bottom: 4px; /* Espacio para cuando se envuelven */
+            margin-bottom: 4px;
         }
 
         .tab-button.active {
@@ -176,18 +173,17 @@
             color: #ffffff;
         }
 
-        /* Efecto de borde de ondas (Scallop) */
         .scallop-divider {
-            height: 10px; /* Ajustado para móviles */
+            height: 10px;
             background-image: radial-gradient(circle at 10px 0, #fff0f5 10px, transparent 11px);
-            background-size: 20px 10px; /* Ajustado para móviles */
+            background-size: 20px 10px;
             background-repeat: repeat-x;
             margin-top: -1px;
         }
 
-        /* --- CONTENIDO PRINCIPAL --- */
+
         .content-area {
-            padding: 15px; /* Reducido para móviles */
+            padding: 15px;
             background-color: #ffffff;
         }
 
@@ -205,28 +201,26 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Estilo de 2 columnas para T&C y Info General */
         .two-columns {
             display: flex;
-            flex-direction: column; /* Apilar en móviles de forma predeterminada */
+            flex-direction: column;
             gap: 15px;
         }
 
         .col-main, .col-side {
-            width: 100%; /* Tomar todo el ancho en móviles */
+            width: 100%;
         }
 
-        /* Tipografía del contenido */
         h2 {
             color: #7eb68b;
-            font-size: 18px; /* Ajustado para móviles */
+            font-size: 18px;
             margin-top: 0;
             margin-bottom: 10px;
         }
 
         .cute-title {
             color: #f4b4ca;
-            font-size: 22px; /* Ajustado para móviles */
+            font-size: 22px;
             text-align: center;
             text-shadow: 1.5px 1.5px 0px #fff0f5;
             margin-bottom: 15px;
@@ -234,13 +228,13 @@
         }
 
         p, li {
-            font-size: 12px; /* Ajustado para móviles */
+            font-size: 12px;
             line-height: 1.5;
             margin-bottom: 10px;
         }
 
         ul {
-            padding-left: 12px; /* Ajustado para móviles */
+            padding-left: 12px;
             margin: 0;
         }
         
@@ -264,80 +258,14 @@
             text-decoration-style: dashed;
         }
 
-        .input-group {
 
-            display: flex;
-
-            gap: 10px;
-
-            margin-bottom: 12px;
-
-        }
-
-        .input-group input[type="number"] {
-
-            margin-bottom: 0;
-
-            flex: 2;
-
-        }
-
-        .input-group select {
-
-            flex: 1;
-
-            padding: 10px;
-
-            border: 2px solid #bde4c3;
-
-            background-color: #ffffff;
-
-            border-radius: 12px;
-
-            font-family: 'Quicksand', sans-serif;
-
-            font-size: 14px;
-
-            color: #9e8585;
-
-            font-weight: 700;
-
-            outline: none;
-
-            cursor: pointer;
-
-        }
-
-        .input-group select:focus {
-
-            border-color: #7eb68b;
-
-        }
-
-        @media (min-width: 600px) {
-
-            .input-group { margin-bottom: 15px; }
-
-            .input-group select {
-
-                padding: 12px;
-
-                border-radius: 15px;
-
-                font-size: 15px;
-
-            }
-
-        }
-
-        /* --- CALCULADORAS --- */
         .calc-box {
             background-color: #fff0f5;
             border: 2px dashed #f4b4ca;
-            border-radius: 15px; /* Ajustado para móviles */
-            padding: 15px; /* Reducido para móviles */
+            border-radius: 15px;
+            padding: 15px;
             text-align: center;
-            max-width: 100%; /* Asegurar que se adapte */
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -351,13 +279,13 @@
         
         input[type="number"] {
             width: 100%;
-            padding: 10px; /* Ajustado para móviles */
-            margin-bottom: 12px; /* Ajustado para móviles */
+            padding: 10px;
+            margin-bottom: 12px;
             border: 2px solid #bde4c3;
             background-color: #ffffff;
-            border-radius: 12px; /* Ajustado para móviles */
+            border-radius: 12px;
             font-family: 'Quicksand', sans-serif;
-            font-size: 14px; /* Ajustado para móviles */
+            font-size: 14px;
             color: #9e8585;
             text-align: center;
             font-weight: 700;
@@ -373,10 +301,10 @@
             background-color: #bde4c3;
             color: #ffffff;
             border: 2px solid #7eb68b;
-            padding: 10px; /* Ajustado para móviles */
-            font-size: 14px; /* Ajustado para móviles */
+            padding: 10px;
+            font-size: 14px;
             font-weight: 700;
-            border-radius: 12px; /* Ajustado para móviles */
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.2s;
             font-family: 'Quicksand', sans-serif;
@@ -400,7 +328,7 @@
             display: flex;
             justify-content: space-between;
             font-weight: 500;
-            font-size: 11px; /* Más pequeño para móviles */
+            font-size: 11px;
         }
         
         .result p span:last-child {
@@ -409,7 +337,7 @@
         }
         
         .total {
-            font-size: 13px !important; /* Ajustado para móviles */
+            font-size: 13px !important;
             color: #f4b4ca !important;
             background-color: #fff;
             padding: 6px;
@@ -420,7 +348,7 @@
 
         .payment-info {
             margin-top: 12px;
-            font-size: 11px; /* Ajustado para móviles */
+            font-size: 11px;
             display: none;
             background-color: #ffffff;
             padding: 8px;
@@ -433,177 +361,55 @@
             font-size: 12px;
         }
 
-        /* Estilos extras chiquitos */
-        .sparkle { color: #bde4c3; }
         .footer-bar {
             background-color: #bde4c3;
             color: #fff;
             text-align: center;
-            padding: 8px; /* Ajustado para móviles */
+            padding: 8px;
             font-weight: bold;
-            font-size: 10px; /* Ajustado para móviles */
+            font-size: 10px;
             border-top: 3px solid #7eb68b;
         }
 
-        /* --- MEDIA QUERIES PARA PANTALLAS MÁS GRANDES (Ajustes responsivos adicionales) --- */
         @media (min-width: 600px) {
-            body {
-                padding: 40px 10px;
-            }
-            .top-tag {
-                padding: 8px 20px;
-                margin-left: 20px;
-                font-size: 14px;
-            }
-            .portal-card {
-                border-radius: 25px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            }
-            .header-section {
-                padding: 25px;
-                flex-direction: row; /* Volver a horizontal */
-                justify-content: space-between;
-                text-align: left;
-                gap: 0;
-            }
-            .header-left h1 {
-                font-size: 28px;
-                margin: 0 0 5px 0;
-            }
-            .header-left .sub-info {
-                font-size: 13px;
-                margin-bottom: 10px;
-            }
-            .social-pills {
-                gap: 10px;
-                justify-content: flex-start;
-            }
-            .pill {
-                padding: 4px 12px;
-                border-radius: 15px;
-                font-size: 12px;
-                gap: 5px;
-            }
-            .avatar-container {
-                width: 90px;
-                height: 90px;
-                padding: 4px;
-            }
-            .nav-container {
-                padding: 15px;
-            }
-            .nav-tabs {
-                justify-content: space-between;
-                gap: 8px;
-                flex-wrap: nowrap; /* No envolver */
-            }
-            .tab-button {
-                flex: 1;
-                min-width: auto;
-                padding: 8px 5px;
-                font-size: 13px;
-                border-radius: 15px;
-                margin-bottom: 0;
-            }
-            .scallop-divider {
-                height: 12px;
-                background-size: 20px 12px;
-            }
-            .content-area {
-                padding: 25px;
-            }
-            .two-columns {
-                flex-direction: row; /* Volver a horizontal */
-                gap: 20px;
-            }
-            .col-main {
-                flex: 2;
-                width: auto;
-            }
-            .col-side {
-                flex: 1;
-                width: auto;
-                border-left: 2px solid #bde4c3; /* Línea separadora verde */
-                padding-left: 15px;
-            }
-            h2 {
-                font-size: 22px;
-                margin-bottom: 15px;
-            }
-            .cute-title {
-                font-size: 26px;
-                margin-bottom: 20px;
-                letter-spacing: 2px;
-            }
-            p, li {
-                font-size: 13px;
-                margin-bottom: 12px;
-            }
-            ul {
-                padding-left: 15px;
-            }
-            li::before {
-                left: -15px;
-            }
-            .calc-box {
-                border-radius: 20px;
-                padding: 20px;
-                max-width: 400px;
-            }
-            label {
-                margin-bottom: 10px;
-                font-size: 15px;
-            }
-            input[type="number"] {
-                padding: 12px;
-                margin-bottom: 15px;
-                border-radius: 15px;
-                font-size: 15px;
-            }
-            button.calc-btn {
-                padding: 12px;
-                font-size: 16px;
-                border-radius: 15px;
-            }
-            .result {
-                margin-top: 20px;
-                padding-top: 15px;
-            }
-            .result p {
-                margin: 8px 0;
-                font-size: 12px;
-            }
-            .total {
-                font-size: 16px !important;
-                padding: 8px;
-                border-radius: 10px;
-                margin-top: 10px !important;
-            }
-            .payment-info {
-                margin-top: 15px;
-                font-size: 12px;
-                padding: 10px;
-                border-radius: 15px;
-            }
-            .payment-info strong {
-                font-size: 14px;
-            }
-        .footer-bar {
-            background-color: #bde4c3;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 12px;
-            border-top: 3px solid #7eb68b;
+            body { padding: 40px 10px; }
+            .top-tag { padding: 8px 20px; margin-left: 20px; font-size: 14px; }
+            .portal-card { border-radius: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+            .header-section { padding: 25px; flex-direction: row; justify-content: space-between; text-align: left; gap: 0; }
+            .header-left h1 { font-size: 28px; margin: 0 0 5px 0; }
+            .header-left .sub-info { font-size: 13px; margin-bottom: 10px; }
+            .social-pills { gap: 10px; justify-content: flex-start; }
+            .pill { padding: 4px 12px; border-radius: 15px; font-size: 12px; gap: 5px; }
+            .avatar-container { width: 90px; height: 90px; padding: 4px; }
+            .nav-container { padding: 15px; }
+            .nav-tabs { justify-content: space-between; gap: 8px; flex-wrap: nowrap; }
+            .tab-button { flex: 1; min-width: auto; padding: 8px 5px; font-size: 13px; border-radius: 15px; margin-bottom: 0; }
+            .scallop-divider { height: 12px; background-size: 20px 12px; }
+            .content-area { padding: 25px; }
+            .two-columns { flex-direction: row; gap: 20px; }
+            .col-main { flex: 2; width: auto; }
+            .col-side { flex: 1; width: auto; border-left: 2px solid #bde4c3; padding-left: 15px; }
+            h2 { font-size: 22px; margin-bottom: 15px; }
+            .cute-title { font-size: 26px; margin-bottom: 20px; letter-spacing: 2px; }
+            p, li { font-size: 13px; margin-bottom: 12px; }
+            ul { padding-left: 15px; }
+            li::before { left: -15px; }
+            .calc-box { border-radius: 20px; padding: 20px; max-width: 400px; }
+            label { margin-bottom: 10px; font-size: 15px; }
+            input[type="number"] { padding: 12px; margin-bottom: 15px; border-radius: 15px; font-size: 15px; }
+            button.calc-btn { padding: 12px; font-size: 16px; border-radius: 15px; }
+            .result { margin-top: 20px; padding-top: 15px; }
+            .result p { margin: 8px 0; font-size: 12px; }
+            .total { font-size: 16px !important; padding: 8px; border-radius: 10px; margin-top: 10px !important; }
+            .payment-info { margin-top: 15px; font-size: 12px; padding: 10px; border-radius: 15px; }
+            .payment-info strong { font-size: 14px; }
+            .footer-bar { padding: 10px; font-size: 12px; }
         }
 
-        /* Bloqueo total de modo oscuro */
         html, body {
             filter: none !important;
             color-scheme: light !important;
         }
-
     </style>
 </head>
 <body>
@@ -613,11 +419,11 @@
     
     <div class="portal-card">
         
-        <!-- HEADER MENTA -->
+
         <header class="header-section">
             <div class="header-left">
                 <h1>✤ Geguri Casilla</h1>
-                <div class="sub-info">buenos aires / kr & jp </div>
+                <div class="sub-info">buenos aires / casilla kr</div>
                 <div class="social-pills">
                     <a href="https://www.instagram.com/geguricasilla" target="_blank" class="pill twitter">instagram ➶</a>
                     <a href="https://chat.whatsapp.com/BJexVcQ3ldLJA5uC4Oddaq" target="_blank" class="pill wpp">comunidad 💬</a>
@@ -631,22 +437,20 @@
             </div>
         </header>
 
-        <!-- NAVEGACIÓN ROSA -->
+
         <nav class="nav-container">
             <div class="nav-tabs">
                 <div class="tab-button active" onclick="switchNavTab('inicio')">inicio</div>
                 <div class="tab-button" onclick="switchNavTab('tyc')">reglas</div>
                 <div class="tab-button" onclick="switchNavTab('coreana')">casilla kr</div>
-                <div class="tab-button" onclick="switchNavTab('buyee')">buyee jp</div>
             </div>
         </nav>
-        <!-- Borde de ondas -->
         <div class="scallop-divider"></div>
 
-        <!-- ÁREA DE CONTENIDO BLANCA -->
+
         <main class="content-area">
             
-            <!-- SECCIÓN INICIO -->
+
             <div id="inicio" class="tab-content active">
                 <h2 class="cute-title">✿ bienvenidos ✿</h2>
                 <div class="two-columns">
@@ -662,41 +466,28 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN T&C -->
+
             <div id="tyc" class="tab-content">
-                <div class="two-columns">
-                    <div class="col-main">
+                <div class="two-columns" style="flex-direction: column;">
+                    <div class="col-main" style="width: 100%;">
                         <h2>T&C</h2>
                         <ul>
                             <li>Si un ítem NO llega, hacemos reembolso de 50% del valor + envío + impuestos. No hay reembolso por ítems dañados/falsos.</li>
-                            <li>En caso de que un lote valga más de 5.0 y se considere como estafa, lamentablemente no puedo hacerme cargo. Sólo voy a devolver E+I y Fees. </li>
+                            <li>En caso de que un lote valga más de 5.0 y se considere como estafa, sólo voy a devolver E+I y Fees. </li>
                             <li>Solo entregamos ítems abonados en tiempo y forma que correspondan en el <a href="https://docs.google.com/spreadsheets/d/1tRuT84WzWkuh2ODi-n2X1TgKkxS90WaJFF0Q69eeEZE/edit?usp=sharing" target="_blank" class="highlight-link">Excel</a>. Ítems sobrantes serán vendidos para cubrir gastos de supplies.</li>
                             <li>Tomamos pedidos de sellers de <a href="https://x.com" target="_blank" class="highlight-link">Twitter</a> y <a href="https://m.bunjang.co.kr" target="_blank" class="highlight-link">Bunjang</a>.</li>
                             <li>Lotes de pago inmediato. Pedimos total responsabilidad al pedir.</li>
-                            <li>Sin mínimo de ítems, pero a menos ítems los fees se dividen menos.</li>
+                            <li>Sin mínimo de ítems, pero consideren que menos ítems = los fees se dividen menos.</li>
                             <li>No pueden bajarse. Sólo pueden ceder sus items si se confirma.</li>
                             <li>Ítems con valor más alto que 2.0 = su responsabilidad checkear que la seller sea confiable.</li>
                             <li>Aceptamos sólo photocards, postales, sminis/qrs/digis. NO photobooks ni papelería.</li>
                             <li>No le hablen a sellers de antemano.</li>
                         </ul>
                     </div>
-                    <div class="col-side">
-                        <h2 style="text-align: center;">{ buyee }</h2>
-                        <p style="font-weight: bold; color: #7eb68b; text-align: center;">status: CAJA ABIERTA</p>
-                        <ul>
-                            <li>Sin límite de precios. Solo aceptamos photocards.</li>
-                            <li>Hacemos batches según se llenan para enviar a nuestra casilla KR.</li>
-                            <li>Pueden mandarme mensaje por el grupo de consultas para pedir un link.</li>
-                            <li>Cuando tenga el valor del envío lo voy a pasar por privado. Lo mismo con los impuestos.</li>
-                            <li>No me hago cargo de estafas bajo ningún contexto. Las sellers de Mercari JP tienen su reputación con estrellas y es su responsabilidad revisar que sean confiables.</li>
-                        </ul>
-                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjUxbGJ4dHVtbHBhM2x4d2MxaDYxN3l1MHAxaHA5YnU0cGJ3cjExcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/bEfX0RzC7iZIcNPlVP/giphy.gif" alt="Chiikawa :3" style="display: block; margin: 15px auto 0 auto; width: 60%; border-radius: 15px;">
-                        
-                    </div>
                 </div>
             </div>
 
-            <!-- SECCIÓN CASILLA KR -->
+
             <div id="coreana" class="tab-content">
                 <h2 class="cute-title">✤ Cotizador KR ✤</h2>
                 <div class="calc-box">
@@ -721,38 +512,9 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN BUYEE JP -->
-            <div id="buyee" class="tab-content">
-                <h2 class="cute-title">✤ Cotizador Buyee ✤</h2>
-                <div class="calc-box">
-                    <label for="postAmount">Valor del post de Buyee</label>
-                    <div class="input-group">
-                        <input type="number" id="postAmount" placeholder="Ej: 2500" min="0" step="0.01">
-                        <select id="currencySelect">
-                            <option value="USD">$ USD</option>
-                            <option value="JPY">¥ Yenes</option>
-                        </select>
-                    </div>
-                    
-                    <button class="calc-btn" onclick="calculateBuyee()">Calcular Total</button>
-
-                    <div class="result" id="resBuyee">
-                        <p><span>Valor del Post:</span> <span><span id="bPost">0</span> USD</span></p>
-                        <p class="total"><span>Total con fees:</span> <span>$<span id="bTotalArs">0</span></span></p>
-                    </div>
-
-                    <div class="payment-info" id="payBuyee">
-                        💳 Abonar al alias<br>
-                        <strong>CHAEWONDETRIPLES</strong><br>
-                        (Kaylee Smith)<br>
-                        Enviar comprobante + link a Whatsapp ✿
-                    </div>
-                </div>
-            </div>
-
         </main>
         
-        <!-- FOOTER VERDE -->
+
         <div class="footer-bar">
             Geguri Casilla | Casilla KR desde 2022
         </div>
@@ -760,7 +522,7 @@
 </div>
 
 <script>
-    // Función de pestañas
+
     function switchNavTab(tabId) {
         const contents = document.querySelectorAll('.tab-content');
         const buttons = document.querySelectorAll('.tab-button');
@@ -769,13 +531,10 @@
         buttons.forEach(btn => btn.classList.remove('active'));
         
         document.getElementById(tabId).classList.add('active');
-        
-        // Buscar el botón clickeado para activarlo
-        // Usar currentTarget para mayor compatibilidad
         event.currentTarget.classList.add('active');
     }
 
-   // Calculadora KR
+
     function calculateCoreana() {
         const input = document.getElementById('lotPrice').value;
         const baseValue = parseFloat(input);
@@ -793,7 +552,6 @@
         }
 
         fee = fee * 1.02 * 1.04;
-        
         fee = Math.round(fee);
 
         if (baseValue < 5) {
@@ -812,64 +570,6 @@
         document.getElementById('payCoreana').style.display = 'block';
     }
 
-    // Calculadora Buyee
-    function calculateBuyee() {
-        const input = document.getElementById('postAmount').value;
-        const amount = parseFloat(input);
-        const currency = document.getElementById('currencySelect').value;
-
-        if (isNaN(amount) || amount <= 0) {
-            alert("Por favor, ingresa un valor válido mayor a 0");
-            return;
-        }
-
-        let postUsd = 0;
-        
-        if (currency === 'JPY') {
-            postUsd = (amount / 699) * 4.61;
-        } else {
-            postUsd = amount;
-        }
-
-        const feeUsd = 3.5;
-        const totalUsd = postUsd + feeUsd;
-        
-        const totalArs = totalUsd * 1550;
-        
-        const fmtUsd = num => num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        const fmtArs = num => num.toLocaleString('es-AR', { maximumFractionDigits: 0 });
-        
-        document.getElementById('bPost').innerText = fmtUsd(postUsd);
-        document.getElementById('bTotalArs').innerText = fmtArs(totalArs);
-        
-        document.getElementById('resBuyee').style.display = 'block';
-        document.getElementById('payBuyee').style.display = 'block';
-    }
-
-// Cambiar el ejemplo (placeholder) según la moneda elegida
-    document.getElementById('currencySelect').addEventListener('change', function() {
-        const inputAmount = document.getElementById('postAmount');
-        if (this.value === 'USD') {
-            inputAmount.placeholder = "Ej: 12.50";
-        } else {
-            inputAmount.placeholder = "Ej: 2500";
-        }
-    });
-
-    // Seguridad (Bloqueo de clic derecho y F12)
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
- 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
-            (e.ctrlKey && e.key === 'u')) {
-            e.preventDefault();
-        }
-    });
-    
-    // Marquesina animada en la pestaña
     let titleText = " 🌸 geguri casilla ✧        ";
     function scrollTitle() {
         titleText = titleText.substring(1) + titleText.substring(0, 1);
