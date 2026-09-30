@@ -707,7 +707,7 @@
 
                     <div class="result" id="resCoreana">
                         <p><span>Valor del lote:</span> <span><span id="cBase">0</span> USD</span></p>
-                        <p><span>Valor (x1350):</span> <span>$<span id="cCost">0</span></span></p>
+                        <p><span>Valor (x1400):</span> <span>$<span id="cCost">0</span></span></p>
                         <p><span>Fees + Envío:</span> <span>$<span id="cFee">0</span></span></p>
                         <p class="total"><span>Total con fees y envío:</span> <span>$<span id="cTotal">0</span></span></p>
                     </div>
@@ -783,13 +783,13 @@
             alert("Por favor, ingresá un valor mayor a 0");
             return;
         }
-        const itemCost = baseValue * 1350;
+        const itemCost = baseValue * 1400;
         let fee = 0;
 
         if (baseValue < 30) {
             fee = ((3086 + (baseValue * 41.7)) * 1.03) + (baseValue * 30);
         } else {
-            fee = ((3086 + (baseValue * 43.25)) * 1.03) + (baseValue * 30);
+            fee = ((3086 + (baseValue * 42.25)) * 1.03) + (baseValue * 30);
         }
 
         fee = fee * 1.02 * 1.08;
