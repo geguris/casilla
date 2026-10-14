@@ -291,27 +291,25 @@
             border-color: #7eb68b;
         }
 
-        /* Estilo del Checkbox Extra */
+        /* Checkbox sutil y alineado a la izquierda */
         .checkbox-container {
-            display: flex;
+            display: none; /* Oculto hasta que se calcula por primera vez */
             align-items: center;
-            justify-content: center;
-            gap: 8px;
+            justify-content: flex-start;
+            gap: 6px;
             margin-bottom: 12px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             color: #9e8585;
-            background-color: #ffffff;
-            padding: 8px;
-            border-radius: 10px;
-            border: 2px solid #bde4c3;
+            text-align: left;
+            padding-left: 4px;
         }
 
         .checkbox-container input[type="checkbox"] {
             accent-color: #7eb68b;
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             cursor: pointer;
             margin: 0;
         }
@@ -417,7 +415,7 @@
             .calc-box { border-radius: 20px; padding: 20px; max-width: 400px; }
             label { margin-bottom: 10px; font-size: 15px; }
             input[type="number"] { padding: 12px; margin-bottom: 15px; border-radius: 15px; font-size: 15px; }
-            .checkbox-container { font-size: 13px; padding: 10px; margin-bottom: 15px; }
+            .checkbox-container { font-size: 12px; margin-bottom: 15px; }
             button.calc-btn { padding: 12px; font-size: 16px; border-radius: 15px; }
             .result { margin-top: 20px; padding-top: 15px; }
             .result p { margin: 8px 0; font-size: 12px; }
@@ -509,20 +507,20 @@
                     <label for="lotPrice">Valor Base del Lote (USD)</label>
                     <input type="number" id="lotPrice" placeholder="Ej: 15" min="0" step="1">
                     
-                    <!-- Checkbox actualizado con estilo en verde claro -->
-                    <label class="checkbox-container" for="extraShipping">
-                        <input type="checkbox" id="extraShipping">
-                        Envío Extra <span style="color: #7eb68b; font-weight: 700;">(4000W)</span>
-                    </label>
-                    
                     <button class="calc-btn" onclick="calculateCoreana()">Calcular Total</button>
 
                     <div class="result" id="resCoreana">
+                        <!-- Checkbox sutil que aparece solo al calcular -->
+                        <label class="checkbox-container" for="extraShipping" id="extraShippingContainer">
+                            <input type="checkbox" id="extraShipping" onchange="calculateCoreana()">
+                            Envío Extra <span style="color: #7eb68b; font-weight: 700;">(4000₩)</span>
+                        </label>
+
                         <p><span>Valor del lote:</span> <span><span id="cBase">0</span> USD</span></p>
                         <p><span>Valor (x1400):</span> <span>$<span id="cCost">0</span></span></p>
                         <p><span>Fees + Envío:</span> <span>$<span id="cFee">0</span></span></p>
                         <!-- Línea dinámica para el extra de 4000w -->
-                        <p id="extraShippingRow" style="display: none;"><span>Extra envío de 4000w:</span> <span>+$<span id="cExtraShipping">0</span></span></p>
+                        <p id="extraShippingRow" style="display: none;"><span>Extra del envío caro:</span> <span>+$<span id="cExtraShipping">0</span></span></p>
                         <p class="total"><span>Total con fees y envío:</span> <span>$<span id="cTotal">0</span></span></p>
                     </div>
 
@@ -600,7 +598,9 @@
 
         document.getElementById('cTotal').innerText = fmt(total);
         
+        // Mostrar bloques de resultados y hacer visible el checkbox sutil
         document.getElementById('resCoreana').style.display = 'block';
+        document.getElementById('extraShippingContainer').style.display = 'flex';
         document.getElementById('payCoreana').style.display = 'block';
     }
 
